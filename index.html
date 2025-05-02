@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Wil - Estilo e Tradição</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1585747860715-ebba7bca9e41?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .gold-text {
+            color: #D4AF37;
+        }
+        
+        .gold-border {
+            border-color: #D4AF37;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        
+        .booking-form {
+            background: rgba(20, 20, 20, 0.9);
+        }
+        
+        .nav-link:hover {
+            color: #D4AF37;
+        }
+        
+        .scroll-down {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="fixed w-full z-50 bg-black bg-opacity-90 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <i class="fas fa-cut text-3xl gold-text mr-3"></i>
+                    <h1 class="text-2xl font-bold gold-text">BARBEARIA <span class="text-white">WIL</span></h1>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-yellow-500 font-medium">Início</a>
+                    <a href="#services" class="nav-link text-white hover:text-yellow-500 font-medium">Serviços</a>
+                    <a href="#gallery" class="nav-link text-white hover:text-yellow-500 font-medium">Galeria</a>
+                </nav>
+                
+                <div class="md:hidden">
+                    <button class="text-white focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center justify-center pt-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 font-serif gold-text">BARBEARIA WIL</h1>
+            <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto">Tradição e estilo em cada corte. Seu visual merece o melhor.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#booking" class="bg-amber-700 hover:bg-amber-800 text-white font-bold py-3 px-8 rounded-full transition duration-300">Agendar Horário</a>
+                <a href="#services" class="border-2 gold-border text-white hover:bg-amber-900 hover:bg-opacity-30 font-bold py-3 px-8 rounded-full transition duration-300">Nossos Serviços</a>
+            </div>
+            
+            <div class="mt-20 scroll-down">
+                <a href="#about" class="text-white">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 gold-text font-serif">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-scissors text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center gold-text">Corte Clássico</h3>
+                    <p class="text-gray-400 mb-4 text-center">Técnicas tradicionais para um corte impecável que nunca sai de moda.</p>
+                    <p class="text-amber-600 font-bold text-center">R$ 15,00</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-fire text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center gold-text">Somente Barba</h3>
+                    <p class="text-gray-400 mb-4 text-center">O tratamento completo para sua barba.</p>
+                    <p class="text-amber-600 font-bold text-center">R$ 5,00</p>
+                </div>
+                
+                <div class="service-card bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-child text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center gold-text">Somente sobrancelha</h3>
+                    <p class="text-gray-400 mb-4 text-center">Tratamento simples.</p>
+                    <p class="text-amber-600 font-bold text-center">R$ 3,00</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-900 p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-amber-700 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-crown text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-center gold-text">Pacote Completo</h3>
+                    <p class="text-gray-400 mb-4 text-center">Corte + barba + sobrancelha.</p>
+                    <p class="text-amber-600 font-bold text-center">R$ 22,00</p>
+                </div>
+                
+                <!-- Service 4 -->
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4 gold-text font-serif">Nossa Galeria</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <img src="imagens/corte01.jpg" alt="Corte masculino 1" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="imagens/corte02.jpg" alt="Corte masculino 2" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="imagens/corte03.jpg" alt="Corte masculino 3" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="imagens/corte04.jpg" alt="Corte masculino 4" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="imagens/corte05.jpg" alt="Corte masculino 5" class="w-full h-auto object-cover rounded-lg shadow-lg">
+                <img src="imagens/corte06.jpg" alt="Corte masculino 6" class="w-full h-auto object-cover rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto booking-form p-8 rounded-lg shadow-2xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold mb-4 gold-text font-serif">Agende Seu Horário</h2>
+                    <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+                </div>
+                
+                <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-gray-300 mb-2">Nome Completo</label>
+                        <input type="text" id="name" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 text-white">
+                    </div>
+                    
+                    <div>
+                        <label for="phone" class="block text-gray-300 mb-2">Telefone</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 text-white">
+                    </div>
+                    
+                    <div>
+                        <label for="service" class="block text-gray-300 mb-2">Serviço</label>
+                        <select id="service" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 text-white">
+                            <option value="">Selecione um serviço</option>
+                            <option value="classic">Corte Clássico - R$15</option>
+                            <option value="beard">Somente Barba - R$5</option>
+                            <option value="kids">Somente sobrancelha - R$3</option>
+                            <option value="complete">Pacote Completo - R$22</option>
+                            
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="date" class="block text-gray-300 mb-2">Data</label>
+                        <input type="date" id="date" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 text-white">
+                    </div>
+                    
+                    <div>
+                        <label for="time" class="block text-gray-300 mb-2">Horário</label>
+                        <select id="time" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 text-white">
+                            <option value="">Selecione um horário</option>
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="13:00">12:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                        </select>
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label for="notes" class="block text-gray-300 mb-2">Observações</label>
+                        <textarea id="notes" rows="3" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-amber-600 text-white"></textarea>
+                    </div>
+
+                    <div class="flex items-start">
+                        <div class="bg-amber-700 p-3 rounded-full mr-4">
+                            <i class="fas fa-clock text-white"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-bold mb-1">Horário de Funcionamento</h4>
+                            <p class="text-gray-400">Seg-Sex: 8h às 18h</p>
+                            <p class="text-gray-400">Sábado: 8h às 18h</p>
+                            <p class="text-gray-400">Domingo: 8h às 12h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="md:col-span-2 text-center">
+                        <button onclick="confirmarAgendamento()" type="button" class="bg-amber-700 hover:bg-amber-800 ...">Confirmar Agendamento</button>
+                    </div>
+                </form>
+                <div id="listaAgendamentos" class="mt-6">
+                    <h3 class="text-lg font-bold mb-2">Agendamentos Salvos</h3>
+                    <ul id="agendamentos" class="space-y-2 text-sm text-gray-700"></ul>
+                  </div>                  
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 bg-gray-800">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3873.4240948832507!2d-40.105734324907495!3d-13.873571586531115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDUyJzI0LjkiUyA0MMKwMDYnMTEuNCJX!5e0!3m2!1spt-BR!2sbr!4v1746197739836!5m2!1spt-BR!2sbr"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <i class="fas fa-cut text-3xl gold-text mr-3"></i>
+                    <h1 class="text-2xl font-bold gold-text">BARBEARIA <span class="text-white">WIL</span></h1>
+                </div>
+                
+                <div class="text-gray-400 text-center md:text-right">
+                    <p>&copy; 2023 Barbearia Wil. Todos os direitos reservados.</p>
+                    <p class="mt-2">Desenvolvido com <i class="fas fa-heart text-red-500"></i> por sua equipe</p>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>Barbearia Wil - Tradição e estilo em cada corte desde 2025</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="fixed bottom-8 right-8 bg-amber-700 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <a href="https://www.instagram.com/barbearia_wiil"
+        target="_blank"
+        id="instagram-float"
+        class="fixed bottom-8 left-8 bg-black-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-pink-700 transition-all duration-300 z-50 ">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <script>
+        // Back to Top Button
+        window.addEventListener('scroll', function() {
+            var backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o comportamento padrão do link
+                window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // Rolagem suave para o topo
+            });
+        });
+
+        // Mobile menu toggle (would need additional HTML and CSS for full functionality)
+        // This is just a placeholder
+        document.querySelector('.md\\:hidden button').addEventListener('click', function() {
+            alert('Menu mobile seria aberto aqui');
+        });
+
+        // Form submission handling
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Formulário enviado com sucesso! Entraremos em contato em breve.');
+                form.reset();
+            });
+        });
+    </script>
+    <script>
+        function confirmarAgendamento() {
+          const nome = document.getElementById('name').value.trim();
+          const telefone = document.getElementById('phone').value.trim();
+          const servico = document.getElementById('service').value;
+          const servicoTexto = document.querySelector('#service option:checked').text;
+          const data = document.getElementById('date').value;
+          const hora = document.getElementById('time').value;
+          const obs = document.getElementById('notes').value.trim();
+      
+          if (!nome || !telefone || !servico || !data || !hora) {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return;
+          }
+      
+          const agendamento = {
+            nome, telefone, servico: servicoTexto, data, hora, obs
+          };
+      
+          // Salvar no LocalStorage
+          let agendamentos = JSON.parse(localStorage.getItem('agendamentos')) || [];
+          agendamentos.push(agendamento);
+          localStorage.setItem('agendamentos', JSON.stringify(agendamentos));
+          mostrarAgendamentos();
+      
+          // Enviar para WhatsApp
+          const mensagem = `*Novo Agendamento*\n\n` +
+                           `*Nome:* ${nome}\n` +
+                           `*Telefone:* ${telefone}\n` +
+                           `*Serviço:* ${servicoTexto}\n` +
+                           `*Data:* ${data}\n` +
+                           `*Horário:* ${hora}\n` +
+                           `*Observações:* ${obs || 'Nenhuma'}`;
+      
+          const numero = '5573991806406'; // Substitua com seu número do WhatsApp
+          const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+          window.open(url, '_blank');
+      
+          document.getElementById('agendamentoForm').reset();
+        }
+      
+        function mostrarAgendamentos() {
+          const lista = document.getElementById('agendamentos');
+          lista.innerHTML = '';
+          const agendamentos = JSON.parse(localStorage.getItem('agendamentos')) || [];
+          agendamentos.forEach((ag) => {
+            const item = document.createElement('li');
+            item.innerText = `${ag.nome} - ${ag.servico} em ${ag.data} às ${ag.hora}`;
+            lista.appendChild(item);
+          });
+        }
+      
+        document.addEventListener('DOMContentLoaded', mostrarAgendamentos);
+      </script>      
+</body>
+</html>
